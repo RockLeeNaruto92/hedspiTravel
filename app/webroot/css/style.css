@@ -189,8 +189,10 @@ h1 small {
 	margin:0 0 32px;
 	padding:0;
 	background:repeat-x left bottom;
+	display: inline-block;
 }
 .content .mainbar .post_content {
+	padding-left: 50px;
 	float:right;
 	width:420px;
 }
