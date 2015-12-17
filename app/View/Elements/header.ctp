@@ -8,11 +8,31 @@
   <div class="clr"></div>
   <div class="menu_nav">
     <ul>
-      <li><a href="index.html"><span>Home Page</span></a></li>
-      <li><a href="support.html"><span>Support</span></a></li>
-      <li><a href="about.html"><span>About Us</span></a></li>
-      <li class="active"><a href="blog.html"><span>Blog</span></a></li>
-      <li><a href="contact.html"><span>Contact Us</span></a></li>
+      <li class="<?php if ($this->params['controller'] == 'tours' && $this->params['action'] != 'book') echo 'active';?>">
+        <a href="/tours/">
+          <span>Home Page</span>
+        </a>
+      </li>
+      <li class="<?php if ($this->params['controller'] == 'statics' && $this->params["action"] == "support") echo 'active';?>">
+        <a href="#">
+          <span>Support</span>
+        </a>
+      </li>
+      <li class="<?php if ($this->params['controller'] == 'statics' && $this->params["action"] == "about") echo 'active';?>">
+        <a href="#">
+          <span>About us</span>
+        </a>
+      </li>
+      <li class="<?php if ($this->params['controller'] == 'tours' && $this->params["action"] == "book") echo 'active';?>">
+        <a href="#">
+          <span>Book tickets</span>
+        </a>
+      </li>
+      <li class="<?php if ($this->params['controller'] == 'statics' && $this->params["action"] == "contact") echo 'active';?>">
+        <a href="#">
+          <span>Contact us</span>
+        </a>
+      </li>
     </ul>
   </div>
   <div class="clr"></div>

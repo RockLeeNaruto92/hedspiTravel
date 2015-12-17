@@ -1,5 +1,5 @@
 <div class="article">
-  <h3><?= $tour["id"] ?></h3>
+  <h3><a href="/tours/view/<?= $tour["id"] ?>"><?= $tour["id"] ?></a></h3>
   <div class="img">
     <img src="/images/img1.jpg" width="198" height="208" alt="website template image" class="fl">
   </div>
