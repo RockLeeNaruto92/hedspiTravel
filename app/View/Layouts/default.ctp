@@ -32,6 +32,7 @@
 		<div class="content">
 			<div class="content_resize">
 				<div class="mainbar">
+					<?php echo $this->element("flash");?>
 					<?php echo $this->fetch("content"); ?>
 				</div>
 				<div class="sidebar">
