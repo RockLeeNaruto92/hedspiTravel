@@ -20,4 +20,21 @@ class ToursController extends AppController {
       }
     }
   }
+
+  public function view($id = NULL){
+    if ($id == NULL) return;
+    $client = new nusoap_client("http://localhost/TravelWS/travel_services.wsdl", true);
+    $error = $client->getError();
+
+    if ($error) $this->set("error", $error);
+    else {
+      $result = $client->call("findTourById", array("id" => $id));
+      if ($client->fault) $this->set("error", $result);
+      else {
+        $error = $client->getError();
+        if ($error) $this->set("error", $error);
+        else $this->set("result", $result);
+      }
+    }
+  }
 }
