@@ -17,6 +17,38 @@
   </div>
   <br><br><br>
   <div class="form-group">
+    <label class="control-label col-sm-4" for="flight_id"><strong>Flight:</strong></label>
+    <div class="col-sm-8">
+      <select id="tour_id" name="flight_id" class="form-control">
+        <?php
+          foreach ($flights as $flight){
+            if (isset($contract) && $contract["flight_id"] == $flight["id"])
+              echo "<option selected value='" . $flight["id"] . "'>". $flight["name"] . " - " . $flight["id"] ."</option>";
+            else
+              echo "<option value='" . $flight["id"] . "'>". $flight["name"] . " - " . $flight["id"] ."</option>";
+          }
+        ?>
+      </select>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="form-group">
+    <label class="control-label col-sm-4" for="hotel_id"><strong>Hotel:</strong></label>
+    <div class="col-sm-8">
+      <select id="tour_id" name="hotel_id" class="form-control">
+        <?php
+          foreach ($hotels as $hotel){
+            if (isset($contract) && $contract["hotel_id"] == $hotel["id"])
+              echo "<option selected value='" . $hotel["id"] . "'>". $hotel["name"] . "</option>";
+            else
+              echo "<option value='" . $hotel["id"] . "'>". $hotel["name"] . "</option>";
+          }
+        ?>
+      </select>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="form-group">
     <label class="control-label col-sm-4" for="customer_id_number"><strong>Customer:</strong></label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="customer_id_number" name="customer_id_number"
