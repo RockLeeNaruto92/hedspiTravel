@@ -5,8 +5,13 @@
     <div class="col-sm-10">
       <input type="text" class="form-control" id="id"
         placeholder="Enter tour id" name="id"
-        value="<?= isset($tour) ? $tour["id"] : '' ?>">
+        value="<?= isset($tour) ? $tour["id"] : '' ?>"
+        <?php if (isset($isUpdate)) echo "disabled"; ?>>
     </div>
+    <?php
+      if (isset($isUpdate))
+        echo "<input type='hidden' name='id' value='". $tour["id"] ."'>";
+    ?>
   </div>
   <br><br><br>
   <div class="form-group">
