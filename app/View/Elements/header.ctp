@@ -23,7 +23,7 @@
           <span>About us</span>
         </a>
       </li>
-      <li class="<?php if ($this->params['controller'] == 'tours' && $this->params["action"] == "book") echo 'active';?>">
+      <li class="<?php if ($this->params['controller'] == 'tickets' && $this->params["action"] == "book") echo 'active';?>">
         <a href="#">
           <span>Book tickets</span>
         </a>
