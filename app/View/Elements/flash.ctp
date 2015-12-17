@@ -1,5 +1,9 @@
-<div class="col-sm-12 alert alert-success">
-  <?php
-    if (isset($message)) echo $message;
+<?php
+  if (isset($message)){
   ?>
-</div>
+    <div class="col-sm-12 alert alert-success">
+      <?= $message ?>
+    </div>
+  <?php
+  }
+?>
